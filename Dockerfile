@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Ruby
 RUN apt-get -y update && apt-get install -y ruby-full
@@ -79,5 +78,8 @@ RUN npm -v
 
 # Install Task Automation
 RUN apt-get install -y yarn
+RUN apt-get install -y yarn
 RUN npm install -g grunt-cli
 RUN npm install gulp-cli -g
+# install rsync automation
+RUN apt install rsync
