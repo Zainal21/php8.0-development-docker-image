@@ -60,7 +60,6 @@ RUN git --version
 # Install SASS & Compass
 RUN gem install sass
 RUN gem install compass
-RUN gem install css_parser
 
 # Install Composer
 RUN apt-get install -y php-cli
@@ -75,7 +74,7 @@ RUN apt-get purge nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt -y update
 RUN apt install -y nodejs
-RUN nodejs -v
+RUN node -v
 RUN npm -v
 
 # Install Task Automation
